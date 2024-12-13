@@ -1,0 +1,251 @@
+body {
+    background-image: url('./img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #818181;
+    margin: 0;
+}
+
+.header {
+    background-color: #ffaaaa;
+    color: #f6ffd7;
+    text-shadow: 1px 1px 0px #818181;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #FFF;
+    box-shadow: 5px 5px 30px;
+}
+
+h1 {
+    color: #f6ffd7;
+    text-shadow: 2px 2px 2px #818181;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+img {
+    width: 100px;
+}
+
+.inputText {
+    position: absolute;
+    margin-top: -22px;
+    gap: 10px;
+}
+
+.inputText img {
+    width: 20px;
+    vertical-align: middle;
+}
+
+.inputMoney {
+    position: absolute;
+    margin-left: 250px;
+    margin-top: -80px;
+}
+
+#moneyInput {
+    background-color: #fffebf;
+    font-size: 10px;
+    padding: 6px;
+    border: 1px solid #FFF;
+    border-radius: 15px;
+}
+
+#moneyInput:focus {
+    outline: none;
+    border: 1px dashed #ffa500;
+}
+
+#addMoney {
+    color: #818181;
+    border: 1px solid #FFF;
+    border-radius: 15px;
+    font-size: 10px;
+    padding: 7px;
+    margin-top: 3px;
+}
+
+.container {
+    display: grid;
+    width: 1000px;
+    padding: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.gameDiv {
+    background-color: #deffc6;
+    width: 550px;
+    border: 1px solid #FFF;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 20px;
+    box-shadow: 5px 5px 32px;
+}
+
+.slotsDiv {
+    padding-top: 50px;
+}
+
+
+.lockDiv img {
+    width: 100px;
+}
+
+.locked {
+    opacity: 0.5;
+}
+
+.lock {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.lock:hover {
+    transform: scale(1.1);
+}
+
+.lock.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+.playButton {
+    background: #efe3ff;
+    width: 50%;
+    color: #818181;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px #FFF;
+    justify-content: center;
+    margin-top: 35px;
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px #818181;
+    cursor: pointer;
+}
+
+.winningsDiv {
+    width: 610px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #c6efff;
+    border: 1px solid #FFF;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px;
+    padding: 50px;
+}
+
+.betsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.betsDiv p {
+    margin-bottom: 10px;
+}
+
+.betsDiv img {
+    width: 50px;
+    height: 50px;
+}
+
+.chooseBet {
+    padding-top: 35px;
+}
+
+.setBet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.setBet span {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 2px solid #c6efff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.selected-bet {
+    background: #fffebf;
+    padding: 5px;
+    border: 2px solid #FFF !important;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #818181;
+}
+
+.winningRowsContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-left: 1px dashed #818181;
+    padding-left: 50px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row img {
+    width: 200px;
+    height: auto;
+}
+
+.row p {
+    margin-left: 10px;
+    min-width: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #886300;
+    padding: 5px;
+}
+
+.row p img {
+    width: 25px;
+    vertical-align: middle;
+    padding-right: 3px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(900deg);
+    }
+    75% {
+        transform: rotateX(1350deg);
+    }
+    85% {
+        transform: rotateX(1500deg);
+    }
+    95% {
+        transform: rotateX(1700deg);
+    }
+    100% {
+        transform: rotateX(1800deg);
+    }
+}
+
+.spinning {
+    animation: spin 3s ease-in-out infinite;
+}

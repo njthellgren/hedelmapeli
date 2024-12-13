@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/coins.png">
+    <title>Hedelmäpeli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Hedelmäpeli</h1>
+        <div class="inputMoney"><br>
+            <p class="inputText"><img src="./img/coins.png">Syötä rahaa</p>
+            <input type="text" value="" id="moneyInput" class="money-input" placeholder="Anna rahamäärä"> €<br>
+            <button id="addMoney">Lisää rahat</button>
+        </div>
+    </div>
+
+   <div class="container">
+
+       <div class="gameDiv">
+            <p id="moneyDisplay">Rahaa: 0€</p>
+            <div id="winMessageDisplay" class="message"></div>
+            <div class="slotsDiv">
+                <img src="./img/apple.png">
+                <img src="./img/bananas.png">
+                <img src="./img/grapes.png">
+                <img src="./img/peach.png"><br>
+            </div>
+            <div class="lockDiv">
+                <img class="lock" src="./img/lock.png" alt="lock" draggable="false">
+                <img class="lock" src="./img/lock.png" alt="lock" draggable="false">
+                <img class="lock" src="./img/lock.png" alt="lock" draggable="false">
+                <img class="lock" src="./img/lock.png" alt="lock" draggable="false">
+
+                <button class="playButton">Pelaa!</button>
+
+            </div>
+
+       </div>
+
+       <div class="winningsDiv">
+
+        <div class="betsDiv">
+
+            <p>Panos: 1€</p>
+
+            <div class="chooseBet">
+                <p>Valitse Panos</p><br>
+                <div class="setBet">
+                    <span class="bet1"><img src="./img/coins.png" draggable="false">1€</span>
+                    <span class="bet2"><img src="./img/coins.png" draggable="false">2€</span>
+                    <span class="bet3"><img src="./img/coins.png" draggable="false">3€</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="winningRowsContainer">
+            <div class="row">
+                <img src="./img/7row1.png">
+                <p><img src="./img/coins.png">10x</p>
+            </div>
+            <div class="row">
+                <img src="./img/peachrow.png">
+                <p><img src="./img/coins.png">6x</p>
+            </div>
+            <div class="row">
+                <img src="./img/7row2.png">
+                <p><img src="./img/coins.png">5x</p>
+            </div>
+            <div class="row">
+                <img src="./img/bananarow.png">
+                <p><img src="./img/coins.png">5x</p>
+            </div>
+            <div class="row">
+                <img src="./img/applerow.png">
+                <p><img src="./img/coins.png">4x</p>
+            </div>
+            <div class="row">
+                <img src="./img/grapesrow.png">
+                <p><img src="./img/coins.png">3x</p>
+            </div>
+        </div>
+    </div>
+
+   </div>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
