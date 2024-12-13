@@ -176,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const messageDisplay = document.getElementById("winMessageDisplay");
         if (win) {
             messageDisplay.textContent = `Voitit ${totalWin}€!`;
-            messageDisplay.className = "message win";
 
             const moneyDisplay = document.getElementById("moneyDisplay");
             let currentMoney = parseFloat(moneyDisplay.textContent.replace("Rahaa", "").replace("€", "").trim());
@@ -188,7 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
             slots.forEach(slot => slot.classList.remove("locked"));
         } else {
             messageDisplay.textContent = "Ei voittoa";
-            messageDisplay.className = "message loss";
         }
     }
 });
